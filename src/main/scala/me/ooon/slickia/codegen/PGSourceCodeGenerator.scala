@@ -143,13 +143,28 @@ def $name($args): $name = {
       }
     }
 
+    override def compoundValue(values: Seq[String]): String = {
+      val newValues = values.map { s =>
+        if (s.startsWith("<<[List[")) s.replace("<<[List[", "<<[Seq[") + ".toList"
+        else if (s.startsWith("<<?[List[")) s.replace("<<?[List[", "<<?[Seq[") + ".map(_.toList)"
+        else s
+      }
+      if (hlistEnabled || isMappedToHugeClass) newValues.mkString(" :: ") + " :: HNil"
+      else if (newValues.size == 1) newValues.head
+      else if (newValues.size <= 22) s"""(${newValues.mkString(", ")})"""
+      else
+        throw new Exception("Cannot generate tuple for > 22 columns, please set hlistEnable=true or override compound.")
+    }
+
     override def PlainSqlMapper = new PlainSqlMapper {
       override def code = {
         val types = columnsPositional.map(c => if (c.asOption || c.model.nullable || isGen(c.model) || c.autoInc) s"<<?[${c.rawType}]" else s"<<[${c.rawType}]")
-        val dependencies = columns
+        val dependencies = columns.view
           .map(_.exposedType)
           .distinct
           .filter(!_.contains("JsValue"))
+          .filter(!_.startsWith("List["))
+          .filter(!_.startsWith("Option[List["))
           .zipWithIndex
           .map { case (t, i) => s"""e$i: GR[$t]""" }
           .mkString(", ")
@@ -162,6 +177,7 @@ def $name($args): $name = {
               val r = desiredColumnOrder.map(i => if (hlistEnabled || isMappedToHugeClass) s"r($i)" else tuple(i))
               if (isMappedToHugeClass) r.mkString(", ") else compoundValue(r)
             }
+
             s"""
 val r = ${compoundValue(types)}
 import r._

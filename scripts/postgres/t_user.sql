@@ -15,8 +15,12 @@ create table t_user
     create_time timestamp default current_timestamp not null,
     update_time timestamp default current_timestamp not null
 );
-drop table if exists t_code;
-create table t_code
+
+
+drop table if exists t_student;
+create table t_student
 (
-    id serial
+    id    serial4 not null,
+    tags  int4[]  not null,
+    names varchar[]
 );

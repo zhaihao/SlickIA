@@ -4,7 +4,7 @@ import enums._
 import play.api.libs.json._
 import java.sql.Timestamp
 // AUTO-GENERATED FILE, DO NOT MODIFY
-// GENERATED TIME: Wed Aug 24 22:26:50 CST 2022
+// GENERATED TIME: Thu Sep 01 23:26:27 CST 2022
 object formats {
  implicit val timestampFormat = new Format[Timestamp] {
 
@@ -23,7 +23,7 @@ object formats {
         JsError(Seq(JsPath() -> Seq(JsonValidationError("error.expected.date"))))
     }
   }
-  implicit val TCodeRowFormat:Format[TCodeRow] = Json.format[TCodeRow]
+  implicit val TStudentRowFormat:Format[TStudentRow] = Json.format[TStudentRow]
   implicit val TUserRowFormat:Format[TUserRow] = Json.format[TUserRow]
 }
 
