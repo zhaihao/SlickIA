@@ -25,11 +25,11 @@ object Dependencies extends AutoPlugin {
     lazy val SQUANTS         = "org.typelevel"          %% "squants"                       % "1.7.4"
     lazy val TYPESAFE_CONFIG = "com.typesafe"            % "config"                        % "1.4.2"
     lazy val PLAY_JSON       = "com.typesafe.play"      %% "play-json"                     % "2.9.2"
-    lazy val SQLITE          = "org.xerial"              % "sqlite-jdbc"                   % "3.36.0.3"
+    lazy val SQLITE          = "org.xerial"              % "sqlite-jdbc"                   % "3.39.2.1"
     lazy val PAR             = "org.scala-lang.modules" %% "scala-parallel-collections"    % "1.0.4"
     lazy val CLICKHOUSE      = "com.github.housepower"   % "clickhouse-native-jdbc-shaded" % "2.6.5"
     lazy val HIKARI          = "com.zaxxer"              % "HikariCP"                      % "5.0.1"
-    lazy val POSTGRES        = "org.postgresql"          % "postgresql"                    % "42.4.2"
+    lazy val POSTGRES        = "org.postgresql"          % "postgresql"                    % "42.5.0"
     lazy val MYSQL           = "mysql"                   % "mysql-connector-java"          % "8.0.30"
 
     lazy val DOCKER = Seq(
@@ -39,25 +39,25 @@ object Dependencies extends AutoPlugin {
 
     lazy val SLICK = Seq(
       "com.typesafe.slick"  %% "slick"              % "3.3.3",
-      "com.github.tminglei" %% "slick-pg"           % "0.20.3",
-      "com.github.tminglei" %% "slick-pg_play-json" % "0.20.3",
-      "com.github.tminglei" %% "slick-pg_jts_lt"    % "0.20.3",
+      "com.github.tminglei" %% "slick-pg"           % "0.20.4",
+      "com.github.tminglei" %% "slick-pg_play-json" % "0.20.4",
+      "com.github.tminglei" %% "slick-pg_jts_lt"    % "0.20.4",
       "com.typesafe.slick"  %% "slick-hikaricp"     % "3.3.3"
     )
 
     lazy val LOG = Seq(
-      "org.slf4j"                   % "log4j-over-slf4j" % "1.7.36",
+      "org.slf4j"                   % "log4j-over-slf4j" % "2.0.0",
       "com.typesafe.scala-logging" %% "scala-logging"    % "3.9.5",
-      "ch.qos.logback"              % "logback-classic"  % "1.2.11"
+      "ch.qos.logback"              % "logback-classic"  % "1.4.0"
     )
 
     lazy val SCALA_TEST = Seq(
-      "org.scalatest" %% "scalatest-core"           % "3.2.12",
-      "org.scalatest"  % "scalatest-compatible"     % "3.2.12",
-      "org.scalatest" %% "scalatest-diagrams"       % "3.2.12",
-      "org.scalatest" %% "scalatest-matchers-core"  % "3.2.12",
-      "org.scalatest" %% "scalatest-shouldmatchers" % "3.2.12",
-      "org.scalatest" %% "scalatest-freespec"       % "3.2.12"
+      "org.scalatest" %% "scalatest-core"           % "3.2.13",
+      "org.scalatest"  % "scalatest-compatible"     % "3.2.13",
+      "org.scalatest" %% "scalatest-diagrams"       % "3.2.13",
+      "org.scalatest" %% "scalatest-matchers-core"  % "3.2.13",
+      "org.scalatest" %% "scalatest-shouldmatchers" % "3.2.13",
+      "org.scalatest" %% "scalatest-freespec"       % "3.2.13"
     )
   }
 }
