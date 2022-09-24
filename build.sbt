@@ -1,7 +1,7 @@
 name         := "slickia"
 organization := "me.ooon.slickia"
 version      := "0.1.0-SNAPSHOT"
-scalaVersion := "2.13.8"
+scalaVersion := "2.13.9"
 
 libraryDependencies ++= Seq(ORISON, SQUANTS, TYPESAFE_CONFIG, POSTGRES, MYSQL, SQLITE, OS_LIB)
 libraryDependencies ++= Seq(SCALA_TEST, LOG, SLICK, DOCKER).flatten
