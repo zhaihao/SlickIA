@@ -25,11 +25,11 @@ object Dependencies extends AutoPlugin {
     lazy val SQUANTS         = "org.typelevel"          %% "squants"                       % "1.7.4"
     lazy val TYPESAFE_CONFIG = "com.typesafe"            % "config"                        % "1.4.2"
     lazy val PLAY_JSON       = "com.typesafe.play"      %% "play-json"                     % "2.9.2"
-    lazy val SQLITE          = "org.xerial"              % "sqlite-jdbc"                   % "3.39.3.0"
+    lazy val SQLITE          = "org.xerial"              % "sqlite-jdbc"                   % "3.40.0.0"
     lazy val PAR             = "org.scala-lang.modules" %% "scala-parallel-collections"    % "1.0.4"
     lazy val CLICKHOUSE      = "com.github.housepower"   % "clickhouse-native-jdbc-shaded" % "2.6.5"
     lazy val HIKARI          = "com.zaxxer"              % "HikariCP"                      % "5.0.1"
-    lazy val POSTGRES        = "org.postgresql"          % "postgresql"                    % "42.5.0"
+    lazy val POSTGRES        = "org.postgresql"          % "postgresql"                    % "42.5.1"
     lazy val MYSQL           = "mysql"                   % "mysql-connector-java"          % "8.0.30"
 
     lazy val DOCKER = Seq(
@@ -46,9 +46,9 @@ object Dependencies extends AutoPlugin {
     )
 
     lazy val LOG = Seq(
-      "org.slf4j"                   % "log4j-over-slf4j" % "2.0.3",
+      "org.slf4j"                   % "log4j-over-slf4j" % "2.0.5",
       "com.typesafe.scala-logging" %% "scala-logging"    % "3.9.5",
-      "ch.qos.logback"              % "logback-classic"  % "1.4.3"
+      "ch.qos.logback"              % "logback-classic"  % "1.4.5"
     )
 
     lazy val SCALA_TEST = Seq(
