@@ -33,11 +33,6 @@ object Dependencies extends AutoPlugin {
     lazy val MYSQL           = "mysql"                   % "mysql-connector-java"          % "8.0.32"
     lazy val H2              = "com.h2database"          % "h2"                            % "2.1.214" % Test
 
-    lazy val DOCKER = Seq(
-      "com.whisk"  %% "docker-testkit-scalatest" % "0.11.0",
-      "com.spotify" % "docker-client"            % "8.16.1"
-    )
-
     lazy val SLICK = Seq(
       "com.typesafe.slick"  %% "slick"              % "3.4.1",
       "com.github.tminglei" %% "slick-pg"           % "0.21.1",
