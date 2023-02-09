@@ -31,6 +31,7 @@ object Dependencies extends AutoPlugin {
     lazy val HIKARI          = "com.zaxxer"              % "HikariCP"                      % "5.0.1"
     lazy val POSTGRES        = "org.postgresql"          % "postgresql"                    % "42.5.3"
     lazy val MYSQL           = "mysql"                   % "mysql-connector-java"          % "8.0.32"
+    lazy val H2              = "com.h2database"          % "h2"                            % "2.1.214" % Test
 
     lazy val DOCKER = Seq(
       "com.whisk"  %% "docker-testkit-scalatest" % "0.11.0",

@@ -21,6 +21,7 @@ import syntax.future._
   * @version 1.0
   * @since 2022/8/18 21:24
   */
+//noinspection SqlNoDataSourceInspection,SqlResolve
 class JsonSpec extends DBSpec {
 
   import tables._

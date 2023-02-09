@@ -15,6 +15,7 @@ import syntax.future._
   * @version 1.0
   * @since 2022/9/1 21:41
   */
+//noinspection SqlNoDataSourceInspection,SqlResolve
 class ArraySpec extends DBSpec {
 
   import tables._
