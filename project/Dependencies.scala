@@ -19,17 +19,17 @@ object Dependencies extends AutoPlugin {
 
   object autoImport {
 
-    lazy val ORISON          = "me.ooon"                %% "orison"                        % "1.0.5"
+    lazy val ORISON          = "me.ooon"                %% "orison"                        % "1.0.8"
     lazy val NSCALA          = "com.github.nscala-time" %% "nscala-time"                   % "2.30.0"
     lazy val OS_LIB          = "com.lihaoyi"            %% "os-lib"                        % "0.9.0"
     lazy val SQUANTS         = "org.typelevel"          %% "squants"                       % "1.7.4"
     lazy val TYPESAFE_CONFIG = "com.typesafe"            % "config"                        % "1.4.2"
     lazy val PLAY_JSON       = "com.typesafe.play"      %% "play-json"                     % "2.9.2"
-    lazy val SQLITE          = "org.xerial"              % "sqlite-jdbc"                   % "3.40.0.0"
+    lazy val SQLITE          = "org.xerial"              % "sqlite-jdbc"                   % "3.40.1.0"
     lazy val PAR             = "org.scala-lang.modules" %% "scala-parallel-collections"    % "1.0.4"
     lazy val CLICKHOUSE      = "com.github.housepower"   % "clickhouse-native-jdbc-shaded" % "2.6.5"
     lazy val HIKARI          = "com.zaxxer"              % "HikariCP"                      % "5.0.1"
-    lazy val POSTGRES        = "org.postgresql"          % "postgresql"                    % "42.5.1"
+    lazy val POSTGRES        = "org.postgresql"          % "postgresql"                    % "42.5.3"
     lazy val MYSQL           = "mysql"                   % "mysql-connector-java"          % "8.0.32"
 
     lazy val DOCKER = Seq(
