@@ -29,7 +29,7 @@ object Dependencies extends AutoPlugin {
     lazy val PAR             = "org.scala-lang.modules" %% "scala-parallel-collections"    % "1.0.4"
     lazy val CLICKHOUSE      = "com.github.housepower"   % "clickhouse-native-jdbc-shaded" % "2.6.5"
     lazy val HIKARI          = "com.zaxxer"              % "HikariCP"                      % "5.0.1"
-    lazy val POSTGRES        = "org.postgresql"          % "postgresql"                    % "42.5.4"
+    lazy val POSTGRES        = "org.postgresql"          % "postgresql"                    % "42.6.0"
     lazy val MYSQL           = "mysql"                   % "mysql-connector-java"          % "8.0.32"
     lazy val H2              = "com.h2database"          % "h2"                            % "2.1.214" % Test
 
