@@ -228,6 +228,7 @@ implicit def ${name}(implicit $dependencies): GR[${TableClass.elementType}] = GR
           case "_int8" | "int8[]"                            => "List[Long]"
           case "_int4" | "int4[]"                            => "List[Int]"
           case "_int2" | "int2[]"                            => "List[Short]"
+          case "vector"                                      => "List[Double]" // vector 性能要比 list 好，有时间可以开发一个 vector type
           case "int2"                                        => "Short"
           case "int4"                                        => "Int"
           case "int8"                                        => "Long"

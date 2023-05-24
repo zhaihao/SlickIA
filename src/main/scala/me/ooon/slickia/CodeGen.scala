@@ -20,7 +20,7 @@ import config.HConfig
   */
 trait CodeGen extends orison.App with HConfig
 object PGCodeGen extends CodeGen {
-  val conf           = config.getConfig("slick.code.gen").getConfig("test")
+  val conf           = config.getConfig("slick.code.gen").getConfig("zenchat")
   val url            = conf.getString("url")
   val user           = conf.getString("user")
   val password       = conf.getString("password")
