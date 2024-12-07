@@ -34,11 +34,11 @@ object Dependencies extends AutoPlugin {
     lazy val H2              = "com.h2database"          % "h2"                            % "2.3.232" % Test
 
     lazy val SLICK = Seq(
-      "com.typesafe.slick"  %% "slick"              % "3.4.1",
+      "com.typesafe.slick"  %% "slick"              % "3.5.2",
       "com.github.tminglei" %% "slick-pg"           % "0.21.1",
       "com.github.tminglei" %% "slick-pg_play-json" % "0.21.1",
       "com.github.tminglei" %% "slick-pg_jts_lt"    % "0.21.1",
-      "com.typesafe.slick"  %% "slick-hikaricp"     % "3.4.1"
+      "com.typesafe.slick"  %% "slick-hikaricp"     % "3.5.2"
     )
 
     lazy val LOG = Seq(
